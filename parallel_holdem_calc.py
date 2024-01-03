@@ -22,7 +22,7 @@ def run(hole_cards, num, exact, board, file_name, verbose):
             hole_cards, board = holdem_argparser.parse_file_args(line)
             deck = holdem_functions.generate_deck(hole_cards, board)
             run_simulation(hole_cards, num, exact, board, deck, verbose)
-            print "-----------------------------------"
+            print("-----------------------------------")
         input_file.close()
     else:
         deck = holdem_functions.generate_deck(hole_cards, board)
@@ -179,4 +179,4 @@ def simulation(remaining_board):
 if __name__ == '__main__':
     start = time.time()
     main()
-    print "\nTime elapsed(seconds): ", time.time() - start
+    print("\nTime elapsed(seconds): ", time.time() - start)
